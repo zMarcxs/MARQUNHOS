@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+    <head>
+        <meta charset='utf-8' />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lista</title>
+        <script src='./javascript/index.js' defer ></script>
+        <link rel='stylesheet' href='./css/index.css' />
+    </head>
+    <body>
+        <main class="container">
+            <nav>
+                <button class="tab-button" onclick="LoadList(JSON.parse(localStorage.getItem('lists')).tasks);" id='tasks'>A JOGAR</button>
+                <button class="tab-button" onclick="LoadList(JSON.parse(localStorage.getItem('lists')).complete, false);" id='complete'>JOGOS COMPLETOS</button>
+            </nav>
+            <ul class="list-container">
+                <li class="list-item">
+                    <h2>1</h2>
+                    <span>Titulo 1</span>
+                    <button class="list-item-complete">X</button>
+                </li>
+            </ul>
+            <form onsubmit="AddTask()" action="" id='addTask'>
+                <div class="list-item">
+                    <input type="text" name="" id="item" required>
+                    <button type="submit">Adicionar jogos</button>
+                </div>
+            </form>
+        </main>
+    </body>
+</html>
